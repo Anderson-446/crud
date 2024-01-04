@@ -1,9 +1,10 @@
 const express = require('express');
 const tagRoutes = require('./routes/tagRoutes');
 const taskRoutes = require('./routes/taskRoutes');
+const models = require('./models');
+
 
 const app = express();
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/tasks', taskRoutes);
